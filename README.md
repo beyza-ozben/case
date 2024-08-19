@@ -1,8 +1,12 @@
 # case
+~Zararlı URL Tespiti~
 
-BTK Akademi'de yaptığım staj sürecince bu repoyu kullanacağım.
+USOM'un web sitesinde yayımladığı "Zararlı Bağlantılar" isimli dataseti temel alan bir program/web site yapılacaktır.
 
-Üretecek olduğum projeyi "case" reposunda commitleyerek takip edilmesini sağlayacağım
+Bu proje için .......... kütüphanelerinden faydalanmayı planladığım Python dilini kullanacağım.
 
-Proje detaylarını yakında paylaşacağım.
+Projenin genel akış planı şu şekildedir:
 
+1- Eldeki dataset ile makine öğrenimi
+2- Uygulama/web site için URL girdisi yapılacak box?
+3- RestAPI'ye cevap döndürecek bağlantının kurulması

@@ -1,13 +1,9 @@
 
 cd Masaüstü/proje/case
 
-sudo find /home/ -printf '%s %p\n' | sort -nr | head -1
-
-sudo find /home/ -printf '%s %p\n' | sort -nr | head -1 | awk '{ print $2 }'
-
 FILE=$(sudo find /home/ -printf '%s %p\n' | sort -nr | head -1 | awk '{ print $2 }')
 
-sha256sum "$FILE" > Big_Hash.txt
+sha256sum "$FILE" | awk '{ print $1 }' > Big_Hash.txt
 
 if [ ! -d /Masaüstü/proje/case.git ]; then
     git init

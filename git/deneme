@@ -1,6 +1,14 @@
 
 Commiti push yaparken user name ve şifre istemesi durumunu çözmeye çalışıyorum.
 ----------------------------------------
-Birinci push için istedi
+Birinci push için giriş istedi
+İkinci deneme için git config --global credential.helper cache
+ kullanarak helper'ı cache olarak ayarladım.
+
+
+
+
+
+----------------------------------------
 https://git-scm.com/docs/gitcredentials
 

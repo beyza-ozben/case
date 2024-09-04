@@ -27,17 +27,19 @@ X_test = scaler.transform(X_test)
 
 # Tek katmanlı basit bir model oluşturun
 model = keras.Sequential([
-    layers.Dense(32, activation='relu', input_shape=(X_train.shape[1],)),  # Tek katman
-    layers.Dense(1, activation='sigmoid')  # Çıktı katmanı
+    layers.Input(shape=(X_train.shape[1],)),  # Giriş katmanı, özellik sayısına göre ayarlandı
+    layers.Dense(32, activation='relu'),
+    layers.Dense(1, activation='sigmoid')
 ])
 
 # Modeli derleyin
 model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
 
 # Modeli eğitin
-model.fit(X_train, y_train, epochs=10, batch_size=32, validation_split=0.2)
+model.fit(X_train, y_train, epochs=100, batch_size=64, validation_split=0.2)
 
 # Modelin performansını değerlendirin
 loss, accuracy = model.evaluate(X_test, y_test)
 print(f'Test kaybı: {loss}, Test doğruluğu: {accuracy}')
 
+model.save('my_model.keras')

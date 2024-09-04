@@ -15,7 +15,7 @@ X = vectorizer.fit_transform(data['domain '])  # URL sütunu
 model = keras.models.load_model('my_model.keras')
 
 # Test edilecek domaini tanımla
-test_domain = ["ziratt"]
+test_domain = ["onlinesube-ziraat"]
 
 # Domaini vektörize et
 test_vector = vectorizer.transform(test_domain)

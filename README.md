@@ -1,11 +1,36 @@
 
-~ Zararlı URL Tespiti ~
+# Zararlı URL Tespiti 
 
-USOM'un web sitesinde yayımladığı "Zararlı Bağlantılar" isimli verilerden API kullanımı ile "banking phishing" urllerini çektim. 
+### _Proje Amacı: Bir URL'nin oltalama olup olmadığını tespit ederek ilk kullanıcının doğru kaynaklara yönlendirilmesini sağlamak._
 
+*Proje Akışı:*
+1. USOM'un web sitesinde yayımladığı "Zararlı Bağlantılar" isimli API'lerden "Banking Phishing" urllerini çekmek.
+2. URL'leri düzenlemek ve etiketleyerek dataset haline getirmek.
+3. Machine Learning için bir model oluşturmak.
+4. Oluşturduğun modeli eğitmek için Python betiği oluştur.
 
+---------------------------------------------------------------------------
 
-Gidişat planı:
-1- Dataset hazırlama
-2- Basic düzey bir machine learning ile dataset eğitimi
-3- API ile istek atılır hale getirmek
+<--> Elindeki dataset etiketleme işlemi için "label.py" dosyasını kullanarak "banking_phishing.txt" adında bir .txt dosyası oluşturuyoruz.
+
+<--> Pandas kütüphanesi kullandığımız için ".csv" uzantılı datasete ihtiyaç var. Bunun için elimizdeki dataseti "pandas_framework.py" ile .csv dosyasına dönüştürüyoruz.
+
+#### <--> Şimdi sıra geldi modeli oluşturmaya! 
+    
+<-----> _"machine_learning.py"_ dosyasındaki kod bloğu ile eğiteceğin modele dair bilgileri düzenleyerek ekle ve eğittin modelin adı ne olsun istiyorsan _"model.save('my_model.keras')"_ satırında 'my_model.keras' kısmına kendi isimlendirmeni yaz!
+    
+![Image-1](space.png)
+    
+#### !!Dikkat!! ".csv dosyandaki etiketlemen nasılsa tam olarak öyle yazmalısın, eğer (space) varsa öyle yazdığından emin ol."
+
+#### <--> Ve son aşama modelini test etmek! 
+
+<-----> "test_model.py" dosyasındaki kod bloğunu localdeki bilgilerine göre güncelleyerek ve "test_domain = '....' " kısmına denemek istediğin URL'yi girerek modelini test edebilirsin. (Bu noktada space olduğuna dikkat et!)
+
+![Image-2](test.png)
+
+(Modelin cevabı 0-1 arasında bir double değer olacak.)
+
+### Tebrikler!! Model başarıyla eğitildi!
+
+![Image-3](return.png)

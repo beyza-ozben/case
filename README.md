@@ -33,4 +33,4 @@
 
 ### Tebrikler!! Model başarıyla eğitildi!
 
-![Image-3](return.png)
+![Image-3](https://github.com/user-attachments/assets/8249171b-aa27-4611-a1c5-eb01d955dba5)

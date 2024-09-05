@@ -5,17 +5,17 @@ from tensorflow import keras
 from keras import layers
 
 # CSV dosyasını oku
-data = pd.read_csv('banking_phishing.csv')
+data = pd.read_csv('mix_labels.csv')
 
 # TF-IDF vektörizer nesnesini oluştur
 vectorizer = TfidfVectorizer()
-X = vectorizer.fit_transform(data['domain '])  # URL sütunu
+X = vectorizer.fit_transform(data['domain'])  # URL sütunu
 
 # Modeli yükle
-model = keras.models.load_model('my_model.keras')
+model = keras.models.load_model('new_model.keras')
 
 # Test edilecek domaini tanımla
-test_domain = ["onlinesube-ziraat"]
+test_domain = ["ziraatbank"]
 
 # Domaini vektörize et
 test_vector = vectorizer.transform(test_domain)

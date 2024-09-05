@@ -1,7 +1,7 @@
 import pandas as pd
 
 # .txt dosyasını oku ve işleme al
-with open('banking_phishing.txt', 'r') as file:
+with open('mix_labels.txt', 'r') as file:
     lines = file.readlines()
 
 # URL ve etiketleri ayırın
@@ -15,9 +15,9 @@ for line in lines:
 
 # Veriyi DataFrame'e dönüştür
 data = pd.DataFrame({
-    'url': urls,
+    'domain': urls,
     'label': labels
 })
 
 # DataFrame'i .csv dosyasına kaydet
-data.to_csv('banking_phishing.csv', index=False)
+data.to_csv('mix_labels.csv', index=False)

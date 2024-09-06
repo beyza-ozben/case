@@ -94,4 +94,9 @@ Komutunu çalıştırınca çıktın bu olacak: (vsCode IDE'sinde çalışma hat
 
 ### <---> Projeni dockerize edip container haline getirerek her platformda çalışmasını sağlayabilirsin!
 
+-------------------------------------------
+###  -- Kaynakça --
 
+1. [Zararlı URL dataları](https://www.usom.gov.tr/adres)
+2. [Temel RestAPI](https://medium.com/@ibrahimpuskullu44/flask-kullanarak-python-ile-temel-bir-restful-api-olu%C5%9Fturma-2817b5f1f929)
+3. [Örnek curl'ler](https://gist.github.com/subfuzion/08c5d85437d5d4f00e58)

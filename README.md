@@ -86,7 +86,8 @@ Python scriptini çalıştırınca böyle bir çıktı alacaksın:
 
 Terminal & CMD çalışır durumdayken bir tane daha aç ve bulunduğun aynı dizine gir. Ardından,
 ```
-curl -X POST http://127.0.0.1:5000/test -H "Content-Type: application/json" -d "{\"domain\":\"testedeceğinveri\"}" #API'ye ulaşabileceğimiz iki yöntemden birisi curl ile POST atmaktır. Burada biz de bunu kullandık.
+curl -X POST http://127.0.0.1:5000/test -H "Content-Type: application/json" -d "{\"domain\":\"testedeceğinveri\"}"
+#API'ye ulaşabileceğimiz iki yöntemden birisi curl diğeri postman'dir. Burada biz curl ile POST atmayı kullandık.
 ```
 Komutunu çalıştırınca çıktın bu olacak: (vsCode IDE'sinde çalışma hatası alabilirsin, CMD(komut istemi) kullanmanı tavsiye ederim.)
 
